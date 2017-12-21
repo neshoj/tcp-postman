@@ -1,0 +1,40 @@
+<h2>Request</h2>
+<form  #requestForm="ngForm">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="timeOut"> Timeout </label>
+        <select class="form-control" id="timeOut" required>
+          <option *ngFor="let timeOut of timeOuts" [value]="timeOut">{{timeOut}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="serverIp">Host IP</label>
+        <input required pattern="^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$" [(ngModel)]="request.serverIP"
+          name="serverIp" type="text" class="form-control" id="serverIp" placeholder="127.0.0.1">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="serverPort">Host Port</label>
+        <input  required pattern="[0-9]{0,5}" [(ngModel)]="request.serverPort" name="serverPort" type="text" class="form-control" id="serverPort" placeholder="0000">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="requestJson">Request</label>
+        <textarea class="form-control" id="requestJson" rows="4" required [(ngModel)]="request.requestJson" name="requestJson"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="button" class="btn btn-danger" (click)="requestForm.reset()"> Reset </button>
+      <button [disabled]="!requestForm.form.valid || !submitted" (click)="postRequest()" type="submit" type="button" class="btn btn-primary" > SEND </button>
+    </div>
+  </div>
+</form>

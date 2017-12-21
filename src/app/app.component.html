@@ -1,3 +1,30 @@
-<h1>
-  {{title}}
-</h1>
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+        <img src="assets/phone.png" class="rounded float-left" alt="...">
+      <h1 class="display-3">{{title}}</h1>
+      <p>{{description}}</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-6">
+        <app-request></app-request>
+      </div>
+      <div class="col-md-6">
+        <app-response></app-response>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <!-- /container -->
+
+</main>
+
+<footer class="container">
+  <p>&copy; Binary Ltd {{year}}</p>
+</footer>

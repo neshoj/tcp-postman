@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'POS Request Simulator';
+  description = 'This application simulates Point Of Sale mobile terminal requests to the Alpha Middleware Service';
+   year = new Date().getFullYear();
 }
