@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'POS Request Simulator';
-  description = 'This application simulates Point Of Sale mobile terminal requests to the Alpha Middleware Service';
+  description = 'This application simulates Point Of Sale mobile terminal requests to a middleware Service';
    year = new Date().getFullYear();
 }

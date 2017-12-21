@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -20,7 +21,8 @@ import { ProcessorService } from './processor.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ClipboardModule
+    ClipboardModule,
+    HttpClientModule
   ],
   providers: [ProcessorService],
   bootstrap: [AppComponent]

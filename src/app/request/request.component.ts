@@ -25,7 +25,10 @@ export class RequestComponent implements OnInit {
     this.submitted = false;
     // Forward the reques to middleware service
     this.processorService.sendRequest(this.request)
-      .subscribe(resp => this.results = resp);
+      .subscribe(resp => {
+        this.results = resp;
+        this.submitted = true;
+      });
   }
 
 }
