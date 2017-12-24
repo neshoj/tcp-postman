@@ -1,12 +1,12 @@
 <h2>Response</h2>
-<div *ngIf="!responsePresent" class="alert alert-primary" role="alert">
+<div *ngIf="!processorService.responsePresent" class="alert alert-primary" role="alert">
   Initiate request to load response!
 </div>
-<div *ngIf="!isErro && responsePresent" class="alert alert-success" role="alert">
+<div *ngIf="!processorService.isError && processorService.responsePresent" class="alert alert-success" role="alert">
     Transaction processing successful
   </div>
-<div *ngIf="isError && responsePresent"  class="alert alert-danger" role="alert">
-  Transaction failed
+<div *ngIf="processorService.isError && processorService.responsePresent"  class="alert alert-danger" role="alert">
+  Transaction processing failed
 </div>
 <form>
   <div class="row">

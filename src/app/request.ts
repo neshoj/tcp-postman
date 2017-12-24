@@ -25,6 +25,7 @@ export class Request {
     }
 
     get requestJson() {
-        return this._requestJson ;
+        return this._requestJson;
     }
+
 }

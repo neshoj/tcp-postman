@@ -8,12 +8,11 @@ import { ProcessorService } from '../processor.service';
   styleUrls: ['./response.component.css']
 })
 export class ResponseComponent {
-  responsePresent = false;
-  isError = false;
-
   constructor(public processorService: ProcessorService) {}
 
   clear() {
     this.processorService.response = '';
+    this.processorService.responsePresent = false;
+    this.processorService.isError = false;
   }
 }

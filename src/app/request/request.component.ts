@@ -13,17 +13,16 @@ export class RequestComponent implements OnInit {
 
   timeOuts = ['120', '90', '60', '45', '30'];
   submitted = true;
-  request = new Request(this.timeOuts[0], '127.0.0.1', '0.0.0.0', '');
+  request = new Request( this.timeOuts[0], '127.0.0.1', '0.0.0.0', '');
   results = '';
 
   constructor(private processorService: ProcessorService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   postRequest() {
     this.submitted = false;
-    // Forward the reques to middleware service
+    // Forward the request to middleware service
     this.processorService.sendRequest(this.request)
       .subscribe(resp => {
         this.results = resp;
